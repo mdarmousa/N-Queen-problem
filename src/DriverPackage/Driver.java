@@ -1,6 +1,5 @@
 package DriverPackage;
 
-
 import SolvingBFS.*;
 import SolvingDFS.*;
 import SolvingIDAStar.IDAStar;
@@ -51,7 +50,7 @@ public class Driver extends Application {
 			drowPlane(plane);
 			generateRandomPattern(plane);
 		});
-		
+
 		HBox solve = solveMethodButton(plane);
 
 		RecButton exit = new RecButton("Exit", Color.ALICEBLUE, 530, 40);
@@ -82,7 +81,7 @@ public class Driver extends Application {
 			drowPlane(plane);
 			temp = pfs.getPositon();
 			drowNewGetPositon(plane);
-			
+
 
 			new Alert(AlertType.INFORMATION, "Solution Found in "+(finsh - start)/1000+" Sec.").showAndWait();
 		});
@@ -96,7 +95,7 @@ public class Driver extends Application {
 			drowPlane(plane);
 			temp = dfs.getPositon();
 			drowNewGetPositon(plane);
-			
+
 			new Alert(AlertType.INFORMATION, "Solution Found in "+(finsh - start)/1000+" Sec.").showAndWait();
 
 		});
@@ -110,16 +109,16 @@ public class Driver extends Application {
 			drowPlane(plane);
 			temp = aStar.getPositon();
 			drowNewGetPositon(plane);
-			
-			
+
+
 			new Alert(AlertType.INFORMATION, "Solution Found in "+(finsh - start)/1000+" Sec.").showAndWait();
-			
-			
+
+
 
 		});
 		RecButton IDS = new RecButton("IDS", Color.ALICEBLUE, 100, 40);
 		IDS.setOnMouseClicked(e -> {
-			
+
 			temp=positoin.clone();
 			Double start = (double) System.currentTimeMillis();
 			IDS ids = new IDS(temp);
@@ -140,7 +139,7 @@ public class Driver extends Application {
 			drowPlane(plane);
 			temp = idaStar.getPositon();
 			drowNewGetPositon(plane);
-			
+
 			new Alert(AlertType.INFORMATION, "Solution Found in "+(finsh - start)/1000+" Sec.").showAndWait();
 
 
@@ -177,9 +176,9 @@ public class Driver extends Application {
 	}
 
 	public void generateRandomPattern(GridPane plane) {
-		
+
 		int aa[]={3,5,4,4,7,6,2,5};
-		
+
 		for (int i = 0; i < QUEEN_SIZE; i++) {
 
 			// t'3eer
